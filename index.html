@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style-start.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Portfolio</title>
+</head>
+<script>
+    document.getElementById("Devoir").addEventListener("change", function () {
+        const choix = this.value;
+        if (choix === "DutyOne") {
+            window.open("CV 2025/index.html", "_blank");  // ouvre dans un nouvel onglet
+        } else if (choix === "DutyTwo") {
+            window.open("Cahier_des_Charge.pdf", "_blank");
+        } else if (choix === "DutyThree") {
+            window.open("UnEspaceAuCommentaire/index.html", "_blank");
+        }
+    });
+</script>
+
+<body>
+    <header>
+        <!-- Icône de gestion -->
+        <img src="assets/icon/pixil-frame-1.png" alt="Un_Icon_de_gestion" id="iconGestion" class="Icon_gestion">
+        <form>
+            <select name="Duty" id="Devoir" onchange="ouvrirLien(this.value)">
+                <option value="">-- Choisis un devoir --</option>
+                <option value="CV 2025/index.html">Devoir 1</option>
+                <option value="Cahier_des_Charge.pdf">Devoir 2</option>
+                <option value="UnEspaceAuCommentaire/index.html">Devoir 3</option>
+            </select>
+        </form>
+
+        <script>
+            function ouvrirLien(lien) {
+                if (lien) {
+                    window.open(lien, "_blank"); // ouvre le lien dans un nouvel onglet
+                }
+            }
+        </script>
+
+        </form>
+        <!-- Menu des devoirs -->
+        <div id="menuDevoirs">
+            <a href="CV 2025/index.html" target="_blank">Devoir 1</a>
+            <a href="Cahier_des_Charge.pdf" target="_blank">Devoir 2</a>
+            <a href="UnEspaceAuCommentaire/index.html" target="_blank">Devoir 3</a>
+        </div>
+        <!-- Icône du site (cliquable, recharge index.html) -->
+        <a href="index.html">
+            <img src="assets/icon/pixil-frame-0.png" alt="Icon_du_site" class="Icon_Header">
+        </a>
+
+        <h1 class="H1">Mon Portfolio</h1>
+    </header>
+
+    <main>
+        <section>
+            <img src="assets/image/WIN_20250419_10_46_51_Pro.jpg" alt="Une_photo_de_moi" class="Photo_de_moi">
+            <h2 class="Une_description">Description</h2>
+            <table>
+                <tr>
+                    <th>Nom: Pelissier.</th>
+                    <th>Prénom: Vladimir.</th>
+                </tr>
+            </table>
+            <p class="La_description">
+                Je m'appelle Vladimir Pelissier, je souhaite me lancer dans l'informatique
+                en utilisant des codes du style: l'UA, le Java, le JavaScript, le CSS et le HTML!
+            </p>
+        </section>
+
+        <section>
+            <aside class="Image_de_devoirs">
+                <a href="CV 2025/index.html" target="_blank">
+                    <img src="assets/image/Devoir-Cv.png" alt="Devoir 1" class="ImageDeDevoir">
+                </a>
+                <a href="Cahier_des_Charge.pdf" target="_blank">
+                    <img src="assets/image/Devoir-CahierDesCharges.png" alt="Devoir 2" class="ImageDeDevoir">
+                </a>
+                <a href="UnEspaceAuCommentaire/index.html" target="_blank">
+                    <img src="assets/image/Devoir-DynamiserUnEspaceCommentaire.png" alt="Devoir 3"
+                        class="ImageDeDevoir">
+                </a>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://github.com/coconitoli2" target="_blank" class="LienSociaux">
+            <img src="assets/icon/GitHub-Logo-700x394.png" alt="Github" class="GithubLogo">
+        </a>
+        <a href="https://discord.com/channels/@me/1378419902372646924" target="_blank" class="LienSociaux">
+            <img src="assets/icon/discord-logo-0.png" alt="Discord" class="DiscordIcon">
+        </a>
+        <p class="Une_mise_à_Jour">Dernière mise-à-jour!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
