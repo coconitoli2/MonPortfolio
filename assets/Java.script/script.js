@@ -1,4 +1,4 @@
-console.log("✅ script.js chargé !");
+console.log(" script.js chargé !");
 
 const icon = document.getElementById("iconGestion");
 const menu = document.getElementById("menuDevoirs");
@@ -14,3 +14,5 @@ if (icon) { // sécurité au cas où
         }
     });
 }
+
+

@@ -205,3 +205,36 @@ footer .Une_mise_à_Jour {
     color: rgb(255, 0, 0);
     margin: 50px;
 }
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.LienSociaux img {
+    transition: transform 0.2s;
+}
+
+.LienSociaux:hover img {
+    animation: shake 0.5s;
+    /* durée totale de l’effet */
+    transform-origin: center;
+    /* pivot au centre de l’icône */
+}
